@@ -1,0 +1,30 @@
+/* @author 13011924*/
+body{background:#F2F2F2;}
+.pd{padding:15px;}
+.pdlr{padding:0 15px;}
+.t-center{text-align:center;}
+.bold{font-weight:bold;}
+input::-webkit-input-placeholder {font-weight:normal;}
+.yg-a-btn{display:block;height:40px;border-radius:2px;background:#FC7C26;line-height:40px;color:#FFF;text-align:center;font-size:16px;}
+.yg-input-close{display:none;width:16px;height:16px;margin:12px 15px 0;background:url(../img/sprit/close_input.png) no-repeat;background-size:100%;}
+.yg-hide-pass{display:block;width:50px;height:19px;margin:11px 15px 0 0;background:url(../img/sprit/hide_pass.png) no-repeat;background-size:100%;}
+.yg-hide-pass.yg-show-pass{background-image:url(../img/sprit/show_pass.png);}
+.yg-input,.yg-yzm{height:40px;margin:0px 2px;padding-left:15px;border:1px solid #DCDCDC;background:#FFF;line-height:38px;}
+.yg-input input,.yg-yzm input{width:100%;border:0 none;-webkit-box-sizing:border-box;}
+.yg-input.yg-error,.yg-yzm.yg-error .wbox-flex{border-color:#F73B3A;}
+.yg-yzm{border:0 none;padding-left:0;}
+.yg-yzm input{padding-left:15px;}
+.yg-yzm .wbox-flex{border:1px solid #DCDCDC;}
+.yg-yzm-btn{width:120px;border-top:1px solid #DCDCDC;border-bottom:1px solid #DCDCDC;text-align:center;color:#F4741D;font-size:15px;}
+.yg-gray-bg{background:#CECECE;color:#999;}
+.yg-warn{padding:5px 15px;color:#F73B3A;}
+.yg-input label{font-size:14px;}
+.yg-input .wbox-flex.pr input{position:absolute;left:0px;top:12px;}
+.yg-input .wbox-flex.pr input[type="password"]{z-index:5;}
+.yg-input .wbox-flex input{font-size:14px;}
+.yg-input .wbox-flex.pr input[type="text"]{z-index:4;}
+.yg-fixed{position:absolute;width:100%;bottom:20px;left:0;width:100%;text-align:center;}
+.yg-alert-box .alert-btn{padding:0 70px;}
+.pdlayout{margin-left:6px;font-size:14px;}
+.pdlayout i{margin-left:6px;}
+
