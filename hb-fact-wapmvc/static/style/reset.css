@@ -1,0 +1,45 @@
+*{margin:0;padding:0}
+ol, ul {
+    list-style: none;
+}
+html {
+    font-size: 16px;
+}
+/*body{
+    text-align: center;
+}*/
+body>section {
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 640px;
+}
+
+a{
+    color:#333;
+}
+a{color:#333;text-decoration:none;}
+input:focus,a:focus{outline:none;}
+a,button,input{ -webkit-tap-highlight-color: rgba(255, 255, 255, 0);}
+
+/*a, a:link, a:visited, a:hover, a:active,a:focus{
+    text-decoration:none;
+    outline:none;
+}*/
+input:focus{outline:none;}
+
+em{font-style: normal;}
+i{font-style:normal}
+
+
+/*公共弹出框*/
+.alertBoxBlack {
+    position: absolute;
+    padding: 20px 0px;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    background: rgba(0,0,0,.7);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+}

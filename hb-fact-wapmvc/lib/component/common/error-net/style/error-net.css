@@ -1,0 +1,25 @@
+/*content*/
+.error-def{
+    position: fixed;
+    width: 100%;
+    height: 100%;            /*移动设备有用，PC浏览器下无用*/
+    max-width: 20rem;
+    display: -webkit-box;
+    background: #f2f2f2;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-box-orient: vertical;
+}
+.error-def>div{
+    width: 4.875rem;
+    height: 3.875rem;
+    background: url(../img/error-net.png) no-repeat center center;
+    background-size: 4.875rem 3.875rem;
+    /* -webkit-transform: translateY(-50%);*/
+}
+.error-def>p{
+    padding-top: 2rem;
+    font-family: "黑体","Microsoft Yahei";
+    font-size: 0.82rem;
+    color: #707070;
+}
