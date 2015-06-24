@@ -1,0 +1,88 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <title>苏宁易购优惠券抢抢抢</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/shareoverlay.css">
+    <link rel="stylesheet" href="../lib/component/common/error-net/style/error-net.css">
+    <link rel="stylesheet" href="style/gethbs.css">
+</head>
+<body>
+<script type="text/javascript" async="false" src="../lib/component/inline/adapt.js?__inline"></script>
+<section class="get-hbs">
+    <header>
+    </header>
+    <section>
+    </section>
+
+</section>
+<footer>
+</footer>
+
+<script id="gethbs" type="text/html">
+    <ul>
+        <li>
+            <div class="big-tip">
+                {{if id == 3}}
+                <dl>
+                    <dd>{{resData.hasNum}}</dd>
+                    <dd></dd>
+                </dl>
+                <dl>
+                    <dd>{{resData.total-resData.hasNum}}</dd>
+                    <dd></dd>
+                </dl>
+                {{/if}}
+            </div>
+            {{if id == 2}}
+            <div class="small-tip2">{{smallDesc2}}</div>
+            {{/if}}
+            <div class="small-tip">{{smallDesc}}<em></em></div>
+        </li>
+        {{if id == 1 || id == 2 || id == 3}}
+        <li>
+            <div class="mid-person"></div>
+        </li>
+        {{/if}}
+        <li>
+            <div class="share-btn {{shareClass}}">
+                <a href="javascript:void(0);" data-event="share-btn">{{btnDesc}}</a>
+            </div>
+        </li>
+    </ul>
+</script>
+
+<!--CDN-COBO-->
+<script type="text/javascript" src="http://m.suning.com/RES/wap/common/script/lib/zepto/1.1.4/zepto.min.js?v=2.3.2"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"> </script>
+
+<!--MVC 接口加载区-->
+<script type="text/javascript" src="../lib/wap.util.js"></script>
+<script type="text/javascript" src="../lib/wap.service.js"></script>
+<script type="text/javascript" src="../lib/component/common/wap.cmp.js"></script>
+<script type="text/javascript" src="../lib/wap.mvc.js"></script>
+
+<!--组件加载区-->
+<script type="text/javascript" src="../lib/component/common/error-net/error-net.js"></script>
+<script type="text/javascript" src="../lib/component/wechat.js"></script>
+<script type="text/javascript" src="../lib/component/footer.js"></script>
+<script type="text/javascript" src="../lib/component/invitefriends.js"></script>
+<script type="text/javascript" src="../lib/component/activeend.js"></script>
+
+<!--service加载区-->
+<script type="text/javascript" src="../service/getgrouphb.js?v=1"></script>
+
+<!--组件加载区-->
+<script type="text/javascript" src="../lib/component/header.js"></script>
+
+<!--其他：埋点-->
+<script type="text/javascript" src="../lib/component/common/buriedpoint.js"></script>
+
+</body>
+</html>
+

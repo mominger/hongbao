@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <title>苏宁易购优惠券抢抢抢</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/friends.css"/>
+    <!--<link rel="stylesheet" href="style/shareoverlay.css">-->
+    <link rel="stylesheet" href="../lib/component/common/error-net/style/error-net.css">
+    <link rel="stylesheet" href="style/gethbs.css">
+
+</head>
+<body>
+<script type="text/javascript" async="false" src="../lib/component/inline/adapt.js?__inline"></script>
+<section class="get-hbs get-hb">
+    <header></header>
+    <section>
+        <ul>
+            <li>
+            </li>
+            <li class="data-desc">
+                <div class="mid-person"></div>
+            </li>
+            <li>
+                <div class="share-btn ">
+                    <a href="javascript:void(0);" data-event="share-btn">免费领优惠劵</a>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <div class="friend-view">
+        <section class="friends">
+        </section>
+    </div>
+
+</section>
+<footer>
+</footer>
+
+<script id="desc" type="text/html">
+    <div class="get-money">
+        <p><span>¥</span>{rewardValue}<span>元</span></p>
+        <p>领取<span> {nickName} </span>的红包</p>
+    </div>
+</script>
+<script id="friend" type="text/html">
+    <ul>
+        {{ each list as val i}}
+        <li>
+            <img src="{{val.icon}}" onerror="this.src='img/nofilter/icon_111.jpg'">
+            <dl>
+                <dd>
+                    <p>{{val.nickName}}</p>
+                    <p>{{val.desc}}</p>
+                </dd>
+                <dd>
+                    <p>领到<i></i><em>{{val.receiveReward}}</em><i></i>元</p>
+                    <p>{{val.receiveDate | dateFormat:"MM-dd hh:mm:ss"}}</p>
+                </dd>
+            </dl>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+
+<!--CDN-COBO-->
+<script type="text/javascript" src="http://m.suning.com/RES/wap/common/script/lib/zepto/1.1.4/zepto.min.js?v=2.3.2"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"> </script>
+
+<!--MVC 接口加载区-->
+<script type="text/javascript" src="../lib/wap.util.js"></script>
+<script type="text/javascript" src="../lib/wap.service.js"></script>
+<script type="text/javascript" src="../lib/component/common/wap.cmp.js"></script>
+<script type="text/javascript" src="../lib/wap.mvc.js"></script>
+
+<!--组件加载区-->
+<script type="text/javascript" src="../lib/component/common/error-net/error-net.js"></script>
+<script type="text/javascript" src="../lib/component/footer.js"></script>
+<script type="text/javascript" src="../lib/component/wechat.js"></script>
+<!--<script type="text/javascript" src="../lib/component/invitefriends.js"></script>-->
+<script type="text/javascript" src="../lib/component/activeend.js"></script>
+
+<!--service加载区-->
+<!--<script src="../test/testdata.js"></script>-->
+<script type="text/javascript" src="../service/gethb.js"></script>
+<script type="text/javascript" src="../lib/component/header.js"></script>
+
+<!--其他：埋点-->
+<script type="text/javascript" src="../lib/component/common/buriedpoint.js"></script>
+
+</body>
+</html>

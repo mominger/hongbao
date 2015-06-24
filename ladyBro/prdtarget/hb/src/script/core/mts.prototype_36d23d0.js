@@ -1,0 +1,1 @@
+!function(){!String.format&&(String.prototype.format=function(){var t=1==arguments.length&&arguments[0]instanceof Object,e=t?arguments[0]:arguments,r=t?/\{(\w+)\}/g:/\{(\d+)\}/g;return this.replace(r,function(t,r){return e[r]})}),String.prototype.replaceAll=function(t,e){return RegExp.prototype.isPrototypeOf(t)?this.replace(t,e):this.replace(new RegExp(t,"g"),e)}}();

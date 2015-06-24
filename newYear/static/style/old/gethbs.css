@@ -1,0 +1,721 @@
+/*global*/
+/*html{-webkit-text-size-adjust:none;overflow:hidden;}*/
+/*默认 16px 响应式：读取innerWidth更新fontsize，更新rem匹配 */
+/*转测时再考虑压缩图片*/
+/*html {
+    font-size: 16px;
+}*/
+body {
+    font-family: "黑体","Microsoft Yahei";
+    text-align: center;
+}
+body>section {
+/*    position: relative;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 640px;*/
+   /* background: #000103;*/
+   /* color: #ffffff;*/
+}
+
+
+/*common*/
+
+/*header*/
+/*header: 状态1才展示*/
+header div{
+    display: none;
+    position: absolute;
+}
+/*header: 关注苏宁易购  需求变更取消*/
+header .focus-sn {
+    height: 1rem;
+    padding-top: 0.938rem;
+    padding-left: 0.875rem;
+}
+header .focus-sn a {
+    display: block;
+    position: absolute;
+    height: 1rem;
+    width: 4.219rem;
+    font-size: 0.547rem;
+    line-height: 1rem;
+    border-radius: 0.438rem;
+    text-align: center;
+    background: #bf0201;
+    color: #f1fcef;
+}
+/*header: 活动规则*/
+header .active-rlue {
+    top: 0;
+    right: 0;
+    width: 2.688rem;
+    height: 2.469rem;
+    background: url(../img/sprit/active-rule.png) no-repeat top right;
+    background-size: 2.688rem 2.469rem;
+}
+.my-hbs>header>div{
+    display: block;
+}
+
+/*content*/
+/*content:common*/
+.get-hbs span {
+   display: block;
+}
+.get-hbs{
+    display: none;
+    width: 20rem;
+    /*background-color: #a12425;*/
+    background-repeat:no-repeat;
+    background-position: top center;
+    background-size: 20rem 28.969rem;
+    min-height: 28.969rem;
+  /*  height: 100%;
+    background: #a12425;*/
+}
+.get-hbs .small-font{
+    color: #0e0804;
+}
+.get-hbs .big-font{
+    color: #fff;
+}
+
+/*content：状态1*/
+.my-hbs {
+    /*width: 20rem;*/
+    /*min-height: 28.969rem;*/
+    /*background: url(../img/get-hbs.png) no-repeat top center #ad0d16;*/
+    background-image: url(../img/get-hbs.jpg);
+   /* background-size: 20rem 28.969rem;*/
+}
+/*[data-adapt-type='0'] .my-hbs {
+    background-image: url(../img/320/get-hbs.png);
+}
+[data-adapt-type='1'] .my-hbs {
+    background-image: url(../img/480/get-hbs.png);
+}*/
+.my-hbs>section {
+    padding-top: 1.875rem;
+}
+.my-hbs .big-font {
+    padding-left:0.7rem;
+    font-size: 1.406rem;
+    line-height: 1.5rem;
+}
+.my-hbs .small-font {
+    padding-left:0.7rem;
+    font-size: 1.016rem;
+    line-height: 1.3rem;
+}
+.my-hbs .desc {
+    width: 11.875rem;
+    height: 0px;
+    margin: 0.469rem auto 0 auto;
+    border-top: 1.375rem solid rgba(8, 29, 54, .7);
+    border-left: 0.625rem solid transparent;
+    border-right: 0.625rem solid transparent;
+}
+.my-hbs .desc > span {
+    margin-top: -1.375rem;
+    font-size: 0.938rem;
+    line-height: 1.375rem;
+    color: #fffc00;
+}
+/*.my-hbs .empty {
+    height: 4.375rem;
+}*/
+.my-hbs .share-root{
+    padding-top: 17.344rem;
+    padding-bottom:4.375rem;
+}
+
+/*content：状态2*/
+.u-hbs-end {
+    /*min-height: 30.594rem;*/
+    background-image: url(../img/u-hbs-end.jpg);
+    /*background: url(../img/u-hbs-end.png) no-repeat top center;*/
+    /*background-size: 20rem 28.969rem;*/
+}
+/*[data-adapt-type='0'] .u-hbs-end {
+    background-image: url(../img/320/u-hbs-end.png);
+}
+[data-adapt-type='1'] .u-hbs-end {
+    background-image: url(../img/480/u-hbs-end.png);
+}*/
+.u-hbs-end>section {
+    padding-top:2.5rem;
+}
+/*状态2: 第一个li*/
+.u-hbs-end .big-font {
+    font-size: 1.641rem;
+}
+.u-hbs-end .small-font {
+    font-size: 0.938rem;
+    line-height: 1.4rem;
+    color: #000000;
+}
+/*状态2: 第二个li*/
+.u-hbs-end>section>ul li:nth-child(2) {
+    padding-top: 15.313rem;      /*TODO*/
+}
+.u-hbs-end>section>ul li:nth-child(2) > p{
+    font-size: 0.635rem;
+    line-height: 1rem;
+    color: #ffffff;
+}
+.u-hbs-end .share-root{
+    padding-top: 1.1rem;
+    padding-bottom: 4rem;
+}
+.u-hbs-end .share-btn{
+   /* margin-top: 1.1rem;*/
+    width: 15.125rem;
+}
+.u-hbs-end .share-btn a{
+    font-size: 1.601rem;
+}
+
+/*content：状态3*/
+.remain-hbs {
+    background-image: url(../img/remain-hbs.jpg);
+    /*min-height: 28.969rem;
+    background: url(../img/remain-hbs.png) no-repeat top center;
+    background-size: 20rem 28.969rem;*/
+}
+/*[data-adapt-type='0'] .remain-hbs {
+    background-image: url(../img/320/remain-hbs.png);
+}
+[data-adapt-type='1'] .remain-hbs {
+    background-image: url(../img/480/remain-hbs.png);
+}*/
+.remain-hbs>section {
+    padding-top: 2.344rem;
+}
+.remain-hbs .big-font {
+    font-size: 1.641rem;
+}
+.remain-hbs .small-font {
+    font-size: 0.899rem;
+}
+.remain-hbs .small-font strong{
+    font-size: 1.641rem;
+    color: #e11600;
+}
+.remain-hbs .small-font i{
+    display: inline-block;
+    width: 0.313rem;
+}
+.remain-hbs .desc {
+    width: 11.719rem;
+    height: 0px;
+    margin: 0.469rem auto 0 auto;
+    border-top: 1.375rem solid rgba(8, 29, 54, .7);
+    border-left: 0.625rem solid transparent;
+    border-right: 0.625rem solid transparent;
+}
+.remain-hbs .desc > span {
+    margin-top: -1.375rem;
+    font-size: 0.938rem;
+    line-height: 1.375rem;
+    color: #fff;
+}
+/*.remain-hbs .empty {
+    height: 4.375rem;
+}*/
+.remain-hbs .share-root{
+    padding-top: 15.6rem;
+    padding-bottom:4.375rem;
+}
+
+/*状态2 分享按钮微调*/
+.remain-hbs .share-btn{
+    width: 15.125rem;
+}
+.remain-hbs .share-btn a{
+    font-size: 1.601rem;
+}
+
+/*content：状态4*/
+.active-end {
+    /*min-height: 28.969rem;
+    background: url(../img/active-end.png) no-repeat top center;
+    background-size: 20rem 28.969rem;*/
+    background-image: url(../img/active-end.jpg);
+}
+/*[data-adapt-type='0'] .active-end {
+    background-image: url(../img/320/active-end.png);
+}
+[data-adapt-type='1'] .active-end {
+    background-image: url(../img/480/active-end.png);
+}*/
+.active-end>section {
+    padding-top: 2.9rem;
+}
+.active-end .big-font {
+    font-size: 1.641rem;
+}
+.active-end .small-font {
+    font-size: 0.938rem;
+    line-height: 1.5rem;
+    color: #000;
+}
+/*.active-end .empty {
+    height: 4.375rem;
+}*/
+.active-end .share-root{
+    padding-top: 17rem;
+    padding-bottom:4.375rem;
+}
+/*状态4 分享按钮微调*/
+.active-end .share-btn{
+    width: 12.031rem;
+}
+.active-end .share-btn a{
+    font-size: 1.563rem;
+}
+
+/*content：状态5*/
+.hbs-over {
+    /*min-height: 28.969rem;
+    background: url(../img/hbs-over.png) no-repeat top center;
+    background-size: 20rem 28.969rem;*/
+    background-image: url(../img/hbs-over.jpg);
+}
+/*[data-adapt-type='0'] .hbs-over {
+    background-image: url(../img/320/hbs-over.png);
+}
+[data-adapt-type='1'] .hbs-over {
+    background-image: url(../img/480/hbs-over.png);
+}*/
+.hbs-over>section {
+    padding-top: 2.9rem;
+}
+.hbs-over .big-font {
+    padding-left: 1rem;
+    font-size: 2.423rem;
+}
+.hbs-over .small-font {
+    font-size: 1.133rem;
+    line-height: 1.8rem;
+}
+/*.hbs-over .empty {
+    height: 4.375rem;
+}*/
+.hbs-over .share-root{
+    padding-top: 16rem;
+    padding-bottom:4.375rem;
+}
+/*状态5 分享按钮微调*/
+.hbs-over .share-btn{
+    width: 12.031rem;
+}
+.hbs-over .share-btn a{
+    font-size: 1.563rem;
+}
+
+/*content：状态6*/
+.active-no-begin {
+    /*min-height: 28.969rem;
+    background: url(../img/active-no-begin.png) no-repeat top center;
+    background-size: 20rem 28.969rem;*/
+    background-image: url(../img/active-no-begin.jpg);
+}
+/*[data-adapt-type='0'] .active-no-begin {
+    background-image: url(../img/320/active-no-begin.png);
+}
+[data-adapt-type='1'] .active-no-begin {
+    background-image: url(../img/480/active-no-begin.png);
+}*/
+.active-no-begin>section {
+    padding-top: 2.9rem;
+}
+.active-no-begin .big-font {
+    font-size: 2.07rem;               /*TODO*/
+    line-height: 2.8rem;
+}
+.active-no-begin .small-font {
+    font-size: 1.641rem;              /*TODO*/
+    color: #fff;
+}
+/*.active-no-begin .empty {
+    height: 4.375rem;
+}*/
+.active-no-begin .share-root{
+    padding-top: 16rem;
+    padding-bottom:4.375rem;
+}
+/*状态5 分享按钮微调*/
+.active-no-begin .share-btn{
+    width: 12.031rem;
+}
+.active-no-begin .share-btn a{
+    font-size: 1.563rem;
+}
+
+/*content:  share button*/
+.share-btn {
+    height: 3.063rem;
+    width: 16.281rem;
+    margin: 0 auto;
+    background: -webkit-gradient(linear, 0% 51%, 0% 52%, from(#fd0d0d), to(#ea0000));
+    box-shadow: 0 0.156rem 0 #b20101;
+    border-radius: 0.625rem;
+}
+.share-btn a {
+    display: block;
+    height: 3.063rem;
+    font-size: 1.328rem;
+    line-height: 3.063rem;
+    color: #fffbd2;
+    text-shadow: 1px 1px 0 rgba(150, 2, 2, 0.75);
+}
+
+/*footer*/
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    height: 2.5rem;
+    background: #bf0101;
+    z-index:4;
+    /*background-size: 320px 2px;*/
+}
+footer>ul {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+}
+footer>ul li {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-flex: 1;
+}
+footer>ul li:nth-child(1),
+footer>ul li:nth-child(2) {
+    background: url(../img/sprit/line-spe.png) no-repeat right 0.063rem;
+    background-size: 0.125rem 2.313rem;
+}
+footer>ul li a {
+    display: block;
+    height: 2.5rem;
+    font-size:1.016rem;
+    line-height: 2.5rem;
+    color: #ffd9d9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.65);
+}
+footer>ul li a:hover,
+footer>ul li a:active,
+footer>ul li a:visited{
+    color:#ffff00;
+}
+
+
+/*header: gethb*/
+.get-hb>header>div{
+    display: block;
+}
+/*.get-hb>header>.time-world,
+.get-hbs>header>.time-world{
+    width: 2.625rem;
+    height: 3.5rem;
+    margin-left:1.25rem;
+    background: url(../img/sprit/time-world.png) no-repeat top center;
+    background-size: 2.625rem 3.5rem;
+}*/
+
+/*content: gethb*/
+.get-hb {
+    display: none;
+    width: 20rem;
+    min-height: 24.656rem;
+    background: url(../img/get-hb.jpg) no-repeat top center #a12425;
+    background-size: 20rem 28.969rem;
+}
+/*[data-adapt-type='0'] .get-hb {
+    background-image: url(../img/320/get-hb.jpg);
+}
+[data-adapt-type='1'] .get-hb {
+    background-image: url(../img/480/get-hb.jpg);
+}*/
+.get-hb .empty {
+    height: 2.5rem;
+    background: #a12425;
+}
+/*gethb  领取红包文字*/
+.get-hb-desc{
+    /*line-height:18px;*/
+    padding-left: 1.8rem;
+    padding-top:7.8rem;
+    font-size: 0.586rem;
+    line-height: 0.9rem;
+    text-align: center;
+    color:#840101;
+}
+.get-hb-desc span,
+.get-hb-desc em {
+    color: #ff0000;
+}
+/*PS上的字体没有，用黑体代替*/
+.get-hb-desc span{
+    font-size: 3.9rem;
+    font-weight: bold;
+    line-height: 3.9rem;
+}
+.get-hb-desc em:nth-child(1){
+    font-size: 1.4rem;
+}
+.get-hb-desc em:nth-child(3){
+    font-size: 1.3rem;
+}
+.get-hb-desc strong{
+    color: #000000;
+}
+/*.get-hb-desc p:nth-child(4){
+    padding-left: 0.5rem;
+}*/
+/*.get-hb-desc p:nth-child(5){
+    padding-left: 0.9rem;
+}*/
+/*gethb 分享按钮微调*/
+.get-hb .share-root{
+    padding-top: 11.49rem;
+}
+.get-hb .share-btn a{
+    font-size: 1.563rem;
+}
+
+
+/*other*/
+/*分辨率高度值过大时空背景修复*/
+.empty-bg{
+    position: absolute;
+    background:url(../img/sprit/hb-bg-ten.jpg) repeat;
+    /*background: #bf0101;;*/
+    z-index:-1;
+}
+/*.get-hb .empty-bg{
+    position: absolute;
+    *//*background:url(../img/sprit/hb-bg-ten.png) repeat;*//*
+    background: #a12425;;
+    z-index:-1;
+}*/
+@media screen and (max-width:320px) and (max-height:480px) {
+    /*获取群红包*/
+    .get-hbs .share-root{
+        padding-bottom: 0;
+    }
+
+    /*状态1*/
+    [data-adapt-type='0']  .my-hbs,
+    [data-adapt-type='0']  .u-hbs-end,
+    [data-adapt-type='0']  .remain-hbs,
+    [data-adapt-type='0']  .active-end,
+    [data-adapt-type='0']  .hbs-over,
+    [data-adapt-type='0']  .active-no-begin{
+        background-position: 0 -1.55rem;
+    }
+    .my-hbs .share-root{
+        padding-top: 13.8rem;
+    }
+
+    /*状态2*/
+    .u-hbs-end>section {
+        padding-top: 0.5rem;
+    }
+    .u-hbs-end>section>ul li:nth-child(2) {
+        padding-top: 14rem;
+    }
+    .u-hbs-end .share-root{
+        padding-top:0.5rem;
+    }
+
+    /*状态3*/
+    .remain-hbs>section {
+        padding-top: 0.5rem;
+    }
+    .remain-hbs .share-root {
+        padding-top: 14rem;
+    }
+
+    /*状态4*/
+    .active-end>section {
+        padding-top: 0.5rem;
+    }
+    .active-end .share-root {
+        padding-top: 16.3rem;
+        padding-bottom: 4.375rem;
+    }
+
+    /*状态5*/
+    .hbs-over>section {
+        padding-top: 0.5rem;
+    }
+    .hbs-over .share-root {
+        padding-top: 15.5rem;
+        padding-bottom: 4.375rem;
+    }
+
+    /*状态6*/
+    .active-no-begin>section {
+        padding-top: 0.5rem;
+    }
+    .active-no-begin .share-root {
+        padding-top: 15.3rem;
+    }
+
+    /*获取普通红包*/
+    [data-adapt-type='0']  .get-hb {
+        background-image: url(../img/iphone4/get-hb.jpg);
+    }
+    .get-hb .share-root {
+        transform: scale(.8);
+        padding-top: 9.32rem;
+        margin-bottom: -1.2rem;
+    }
+    .get-hb .get-hb-desc{
+        padding-top: 4.7rem;
+    }
+}
+/*@media screen and (max-width:320px) and (max-height:480px) {
+    .get-hb {
+        display: none;
+        width: 20rem;
+        min-height: 26rem;
+        background: url(../img/320/get-hb-iphone4.png) no-repeat top center;
+        background-size: 20rem 26rem;
+    }
+    .get-hb .share-root{
+        padding-top: 7rem;
+    }
+    *//*
+    .get-hb .get-hb-desc{
+        padding-top: 6.8rem;
+    }*//*
+}*/
+/*针对分辨率读取不同的路径图片*/
+/*@media screen and (max-width:330px){
+    .hbs-over{
+        background: url(../img/320/hbs-over.png) no-repeat top center;
+    }
+}
+@media screen and (max-width:480px){
+    .hbs-over{
+        background: url(../img/480/hbs-over.png) no-repeat top center;
+    }
+}*/
+/*@media screen and (max-width:320px) and (max-height:480px) {
+   *//*gethbs  状态1*//*
+    .my-hbs>section{
+        padding-top: 0.6rem;
+    }
+    .my-hbs .share-root {
+        padding-top: 16.5rem;
+    }
+    *//*.my-hbs{
+        background: url(../img/get-hbs.png) no-repeat 0 -2.5rem;
+        background-size: 20rem 30.594rem;
+    }*//*
+   *//* .my-hbs .share-btn {
+        margin-top: 15rem;
+    }*//*
+   *//* .my-hbs .share-root{
+        padding-top: 15rem;
+        padding-bottom:3rem;
+    }*//*
+
+    *//*gethbs  状态2*//*
+    *//*
+    .u-hbs-end>section {
+        padding-top:0.6rem;
+    }
+
+    .u-hbs-end {
+        background: url(../img/u-hbs-end.png) no-repeat 0 -2.5rem;
+        background-size: 20rem 30.594rem;
+    }
+    .u-hbs-end>section>ul li:nth-child(2) {
+        padding-top: 14rem;
+    }*//*
+
+    *//*gethbs  状态3*//*
+    .remain-hbs>section {
+        padding-top:0.6rem;
+    }
+    .remain-hbs {
+        background: url(../img/remain-hbs.png) no-repeat 0 -2.5rem;
+        background-size: 20rem 30.594rem;
+    }
+    .remain-hbs .share-root{
+        padding-top: 14.5rem;
+        padding-bottom:3rem;
+    }
+
+    *//*gethbs  状态4*//*
+    .active-end>section {
+        padding-top:0.6rem;
+    }
+    .active-end {
+        background: url(../img/active-end.png) no-repeat 0 -2.5rem;
+        background-size: 20rem 30.594rem;
+    }
+    .active-end .share-root{
+        padding-top: 16rem;
+        padding-bottom:3rem;
+    }
+    .active-end .share-btn {
+        margin-top: 16rem;
+    }
+
+    *//*gethbs  状态5*//*
+    .hbs-over>section {
+        padding-top:0.6rem;
+    }
+    .hbs-over {
+        background: url(../img/320/hbs-over.png) no-repeat 0 -2.5rem;
+        background-size: 20rem 30.594rem;
+    }
+    .hbs-over .share-root{
+        padding-top: 15rem;
+        padding-bottom:3rem;
+    }
+    .hbs-over .share-btn {
+        margin-top: 15rem;
+        width: 12.031rem;
+    }
+
+    *//*gethbs  状态6*//*
+    .active-no-begin>section {
+        padding-top:0.6rem;
+    }
+    .active-no-begin {
+        background: url(../img/active-no-begin.png) no-repeat 0 -2.5rem;
+        background-size: 20rem 30.594rem;
+    }
+    .active-no-begin .share-root{
+        padding-top: 15rem;
+        padding-bottom:3rem;
+    }
+    .active-no-begin .share-btn {
+        margin-top: 15rem;
+    }
+
+
+   *//*gethb*//*
+    .get-hb {
+        display: none;
+        width: 20rem;
+        min-height: 28.875rem;
+        background: url(../img/get-hb-iphone.png) no-repeat 0 -0.5rem;
+        background-size: 20rem 28.875rem;
+    }
+    .get-hb .share-root{
+        padding-top: 11rem;
+    }
+    .get-hb .get-hb-desc{
+        padding-top: 6.8rem;
+    }
+}*/
+

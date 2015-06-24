@@ -1,0 +1,56 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta content="telephone=no" name="format-detection" />
+	<title>绑定账号快速购物</title>
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/yg.css"/>
+</head>
+<body>
+    <section class="yg-box mt15">
+
+	     <div class="yg-input wbox">
+		     <div class="wbox-flex">
+			     <input type="tel" id="hd-phone" placeholder="请输入您的手机号码" maxlength="11" class="f15" id="telNum" />
+		     </div>
+		     <em class="yg-input-close"></em>
+	     </div>
+
+	    <div class="yg-warn hd-warn-phone" >
+	    </div>
+
+	    <div class="yg-yzm wbox">
+		    <div class="wbox-flex">
+			    <input type="tel" id="yanzheng" placeholder="请输入验证码" maxlength="6" class="f15"/>
+		    </div>
+		    <div class="yg-yzm-btn" id="yzm">
+			    获取验证码
+			<!-- <i>60</i>s重新获取-->
+			</div>
+	    </div>
+		<div class="yg-warn hd-warn-code" ></div>
+
+	    <div class="pd mt15"><a href="javascript:void(0);" class="yg-a-btn" id="hd-code-submit">提交</a></div>
+	    <div class="pdlr gray7 hb-code-tip">输入手机号、验证码，<br/>快速绑定直接购物使用红包。</div>
+
+    </section>
+
+    <section class="yg-fixed">
+	    <img src="img/logo.png"  width="99" height="20"/>
+    </section>
+
+    <script type="text/javascript" src="http://script.suning.cn/javascript/mobileweb/jquery.min.js"></script>
+    <script type="text/javascript" src="script/base.js"></script>
+    <script type="text/javascript" src="script/yg.js"></script>
+    <script type="text/javascript" src="script/hb.const.js"></script>
+    <script type="text/javascript" src="script/hb.ext.js"></script>
+    <script type="text/javascript" src="script/hb.js"></script>
+    <script type="text/javascript" src="script/hb.request.js"></script>
+    <script type="text/javascript" src="script/hb.validatecode.js"></script>
+    <script type="text/javascript" src="https://imgssl.suning.com/javascript/sn_da/da_opt.js" async="true" ></script>
+</body>
+</html>

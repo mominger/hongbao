@@ -1,0 +1,528 @@
+/*global*/
+/*html{-webkit-text-size-adjust:none;overflow:hidden;}*/
+/*默认 16px 响应式：读取innerWidth更新fontsize，更新rem匹配 */
+/*转测时再考虑压缩图片*/
+/*html {
+    font-size: 16px;
+}*/
+body {
+    font-family: "Microsoft Yahei";
+    text-align: center;
+}
+
+/*common*/
+
+/*header*/
+/*header: 状态1才展示*/
+header div{
+    /*display: none;*/
+    position: absolute;
+}
+/*header: 关注苏宁易购  需求变更取消*/
+header .focus-sn {
+    height: 1rem;
+    padding-top: 0.938rem;
+    padding-left: 0.875rem;
+}
+header .focus-sn a {
+    display: block;
+    position: absolute;
+    height: 1rem;
+    width: 4.219rem;
+    font-size: 0.547rem;
+    line-height: 1rem;
+    border-radius: 0.438rem;
+    text-align: center;
+    background: #bf0201;
+    color: #f1fcef;
+}
+/*header: 活动规则*/
+header .active-rlue {
+    top: 0.69rem;
+    right: 0.78rem;
+    width: 2.219rem;
+    height: 7.438rem;
+    background: url(../img/sprit/active-rule.png) no-repeat top right;
+    background-size: 2.219rem 7.438rem;
+}
+.my-hbs>header>div,
+.get-hb>header>div{
+    display: block;
+}
+
+/*content*/
+/*content:common*/
+.get-hbs{
+    position: relative;
+    width: 20rem;
+    background-repeat:no-repeat;
+    background-position: top center;
+    background-size: 20rem 31.438rem;
+    background: url(../img/bg.jpg);
+    min-height: 31.438rem;
+}
+.get-hbs:after{
+    content: '';
+    position: absolute;
+    background: url(../img/after-line.png) no-repeat 0 0.156rem;
+    background-size: 20rem 0.563rem;
+    width: 20rem;
+    height: 0.719rem;
+    top: 0;
+    left: 0;
+}
+/*分享*/
+.get-hbs>section>ul li:nth-child(3){
+    padding: 0 0.938rem;
+}
+.get-hbs>section>ul .share-btn{
+    display: -webkit-box;
+    background: #e32f0f;
+    height: 4.531rem;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+.get-hbs>section>ul .share-btn a{
+    display: block;
+    width: 12.906rem;
+    height:1.906rem;
+    font-size: 0.844rem;
+    line-height: 1.906rem;
+    text-align: center;
+    color: #990000;
+    background: url(../img/sprit/share-btn.png) no-repeat center center;
+    background-size:12.906rem 1.906rem;
+}
+
+/*content：状态1*/
+.my-hbs>section li:first-child,
+.u-hbs-end>section li:first-child,
+.remain-hbs>section li:first-child,
+.active-end>section li:first-child,
+.hbs-over>section li:first-child,
+.active-no-begin>section li:first-child{
+    padding-top:3.906rem;
+    padding-left:4.531rem;
+}
+.my-hbs .big-tip{
+    width:9.469rem;
+    height:4.875rem;
+    background:url(../img/sprit/my-hbs-tip.png) no-repeat top center;
+    background-size: 9.469rem 4.875rem;
+}
+.my-hbs .small-tip,
+.u-hbs-end .small-tip,
+.u-hbs-end .small-tip2,
+.remain-hbs .small-tip,
+.active-end .small-tip,
+.hbs-over .small-tip,
+.active-no-begin .small-tip{
+    position: relative;
+    font-size: 0.586rem;
+    line-height: 1.5rem;
+    text-align: left;
+    color:#ffffcc;
+    text-shadow: 3px 3px 3px rgba(0,0,0,.65);
+}
+.my-hbs .small-tip:after,
+.u-hbs-end .small-tip:after,
+.remain-hbs .small-tip:after,
+.active-end .small-tip:after,
+.hbs-over .small-tip:after,
+.active-no-begin .small-tip:after{
+    content:'';
+    position: absolute;
+    width: 0.656rem;
+    height: 0.656rem;
+    background: url(../img/after-tip.png) no-repeat  top center;
+    background-size: 0.656rem 0.656rem;
+    top: 0.422rem;
+}
+.my-hbs .mid-person{
+    padding-bottom:0.094rem;
+    min-height: 13.593rem;
+    background: url(../img/get-hbs.png) no-repeat  top center;
+    background-size: 18.125rem 13.593rem;
+}
+
+/*get-hb微调*/
+.get-hb>section,
+.u-hbs-end>section{
+    padding-bottom:3rem;
+}
+.get-hb>section li:nth-child(1){
+    height:9.563rem;
+    padding-top:3rem;
+    background:url(../img/get-hb-top.png) no-repeat top center;
+    background-size: 11.906rem 9.563rem;
+    background-origin: content-box;
+}
+.get-hb li:nth-child(2){
+    position: relative;
+    padding-bottom:0.094rem;
+}
+.get-hb .mid-person{
+    height: 12.906rem;
+    background: url(../img/get-hb.png) no-repeat center bottom;
+    background-size: 18.125rem 10.875rem;
+}
+.get-hb .get-money{
+    position: absolute;
+    top:5.781rem;
+    left:5rem;
+    text-align: left;
+}
+.get-hb .get-money p:nth-child(1){
+    font-size:2rem;
+    font-weight: bold;
+    color:#e1002e;
+}
+.get-hb .get-money p:nth-child(1) span:nth-child(1){
+      font-size:1.5rem;
+}
+.get-hb .get-money p:nth-child(1) span:nth-child(2){
+     font-size:1rem;
+}
+.get-hb .get-money p:nth-child(2){
+    font-size:0.586rem;
+    color:#9f0020;
+}
+.get-hb .get-money p:nth-child(2) span{
+    color: #333333;
+}
+
+/*content：领群红包 状态2*/
+.remain-hbs li:nth-child(2),
+.u-hbs-end li:nth-child(2){
+    margin-top: -0.8rem;
+}
+.u-hbs-end .big-tip{
+    position:relative;
+    width:12.094rem;
+    height:4.631rem;
+    background-image:url(../img/sprit/coupon-ico.png),url(../img/sprit/got-txt.png);
+    background-repeat:no-repeat;
+    background-position: top center, left 3.656rem ;
+    background-size: 12.094rem 3.281rem, 1.844rem 0.875rem;
+}
+.u-hbs-end .big-tip>dl{
+    display: -webkit-box;
+    position: absolute;
+    bottom: 0;
+    left: 2rem;
+    font-size: 1rem;
+    color: #fff;
+}
+.u-hbs-end .big-tip>dl dd:nth-child(2){
+    background: url(../img/sprit/coupon-txt.png) no-repeat bottom right;
+    background-size: 5.938rem 0.875rem;
+    width: 6rem;
+    height: 1.15rem;
+    bottom: 0;
+
+/*    top: 0;
+    left: 0;*/
+}
+.u-hbs-end .small-tip2{
+    padding-top: 0.8rem;
+    line-height: 0.586rem;
+}
+.u-hbs-end .mid-person{
+    padding-bottom:0.094rem;
+    min-height: 13.5625rem;
+    background: url(../img/hb-coupon-bg.png) no-repeat  top center;
+    background-size: 18.125rem 13.5625rem;
+}
+
+
+/*content：领群红包 状态3*/
+.remain-hbs .big-tip{
+    position:relative;
+    width:12.594rem;
+    height:5.65rem;
+    background-image:url(../img/sprit/got-hb-ico.png),url(../img/sprit/fri-got-ico.png),url(../img/sprit/hb-remain.png);
+    background-repeat:no-repeat;
+    background-position: top center, left 3.656rem, bottom left;;
+    background-size: 12.594rem 3.281rem, 5.656rem 0.844rem,1.938rem 0.844rem;
+}
+.remain-hbs .big-tip>dl:nth-child(1){
+    display: -webkit-box;
+    position: absolute;
+    top: 3.29rem;
+    left: 5.8rem;
+    font-size: 1rem;
+    color: #fff;
+}
+.remain-hbs .big-tip>dl:nth-child(1) dd:nth-child(2){
+    background: url(../img/sprit/one-ico.png) no-repeat bottom right;
+    background-size: 0.844rem 0.781rem;
+    width: 1rem;
+    height: 1.15rem;
+    bottom: 0;
+}
+.remain-hbs .big-tip>dl:nth-child(2){
+    display: -webkit-box;
+    position: absolute;
+    top: 4.5rem;
+    left: 2.15rem;
+    font-size: 1rem;
+    color: #fff;
+}
+.remain-hbs .big-tip>dl:nth-child(2) dd:nth-child(2){
+    background: url(../img/sprit/one-mark.png) no-repeat bottom right;
+    background-size: 1rem 0.844rem;
+    width: 1.25rem;
+    height: 1.15rem;
+    bottom: 0;
+}
+/*TODO:mid-person 可以重构，重复较多*/
+.remain-hbs .mid-person{
+    padding-bottom:0.094rem;
+    min-height: 13.593rem;
+    background: url(../img/hb-invited-bg.png) no-repeat  top center;
+    background-size: 18.125rem 13.593rem;
+}
+
+/*content：领群红包 状态4、5、6*/
+.active-end .big-tip{
+    position:relative;
+    width:12.594rem;
+    height: 10.5rem;
+    background-image:url(../img/end-ico.png),url(../img/sprit/end-txt.png);
+    background-repeat:no-repeat;
+    background-position: top left, bottom left;
+    background-size: 6.531rem 6.719rem, 8.563rem 3.188rem;
+}
+.hbs-over .big-tip{
+    position:relative;
+    width:12.594rem;
+    height: 10.5rem;
+    background-image:url(../img/end-ico.png),url(../img/sprit/late-txt.png);
+    background-repeat:no-repeat;
+    background-position: top left, bottom left;
+    background-size: 6.531rem 6.719rem, 6.594rem 3.281rem;
+}
+
+.active-no-begin .big-tip{
+    position:relative;
+    width:12.594rem;
+    height: 10.5rem;
+    background:url(../img/no-start.png) no-repeat top left;
+    background-size: 10.125rem 10.406rem;
+}
+
+
+
+/*微调分享按钮*/
+.get-hbs.active-end ul .share-btn,
+.get-hbs.hbs-over ul .share-btn,
+.get-hbs.active-no-begin ul .share-btn{
+   background:none;
+}
+.get-hbs.active-end ul .share-btn a,
+.get-hbs.hbs-over ul .share-btn a,
+.get-hbs.active-no-begin ul .share-btn a{
+    display: block;
+    width: 10.938rem;
+    height:1.906rem;
+    font-size: 0.844rem;
+    line-height: 1.906rem;
+    text-align: center;
+    color: #990000;
+    background: url(../img/sprit/share-btn-short.png) no-repeat center center;
+    background-size:10.938rem 1.906rem;
+}
+
+/*footer*/
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    height: 2.5rem;
+    padding-top: 0.5rem;
+    background: #851a18;
+    border-top: 0.063rem solid #d35a3b;
+    z-index:4;
+}
+footer:after{
+    content: '';
+    position: absolute;
+    background: url(../img/after-line.png) no-repeat 0 0.156rem;
+    background-size: 20rem 0.563rem;
+    width: 20rem;
+    height: 0.55rem;
+    top: 0;
+    left: 0;
+}
+footer>ul {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+}
+footer>ul li {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-flex: 1;
+}
+footer>ul li:nth-child(1) {
+    border-right: 0.063rem solid #b4402d;
+}
+footer>ul li a {
+    display: block;
+    height: 2.5rem;
+    font-size:0.820rem;
+    line-height: 2.5rem;
+    color: #ffd9d9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.65);
+}
+/*我的红包、购物两图标*/
+footer li:nth-child(1)>div,
+footer li:nth-child(2)>div{
+    height: 1.313rem;
+}
+
+footer li:nth-child(1)>div{
+    width:2rem;
+    background: url(../img/sprit/footer-hb.png) no-repeat center center;
+    background-size: 1.125rem 1.313rem;
+}
+footer li:nth-child(2)>div{
+    width:2.5rem;
+    background: url(../img/sprit/footer-shop.png) no-repeat center center;
+    background-size: 1.688rem 1.313rem;
+}
+
+
+footer>ul li a:hover,
+footer>ul li a:active,
+footer>ul li a:visited{
+    color:#ffff00;
+}
+
+
+/*other*/
+/*微调　子红包好友列表*/
+.friend-view{
+    padding: 0 0.938rem 4rem;;
+    margin-top: -3.5rem;
+}
+.friends ul{
+    padding: 0.7rem  0.313rem 0.313rem 0.313rem;
+    background: #e32f0f;
+}
+.friends li{
+    background:#f4735b;
+    padding: 0.312rem 0.313rem 0.35rem 0.313rem;
+    margin-top: 0.313rem;
+    border-bottom: none;
+}
+.friends dl {
+    padding-left: 0.469rem;
+}
+.friends dd:nth-child(1) {
+    width: 10.2rem;
+    padding-right: 0.5rem;
+}
+.friends dd:nth-child(1) p:nth-child(2) {
+   /* font-size: 0.528rem;*/
+    color: #b11f18;
+}
+.friends dd:nth-child(2){
+    color: #b11f18;
+}
+.friends em {
+    color: #ffff00;
+}
+.friends li:last-child {
+     margin-bottom: 0;
+}
+
+
+/*分辨率高度值过大时空背景修复*/
+/*.empty-bg{
+    position: absolute;
+    background:url(../img/sprit/hb-bg-ten.jpg) repeat;
+    *//*background: #bf0101;;*//*
+    z-index:-1;
+}*/
+
+/*@media screen and (max-width:320px) and (max-height:480px) {
+    *//*获取群红包*//*
+    .get-hbs .share-root{
+        padding-bottom: 0;
+    }
+
+    *//*状态1*//*
+    [data-adapt-type='0']  .my-hbs,
+    [data-adapt-type='0']  .u-hbs-end,
+    [data-adapt-type='0']  .remain-hbs,
+    [data-adapt-type='0']  .active-end,
+    [data-adapt-type='0']  .hbs-over,
+    [data-adapt-type='0']  .active-no-begin{
+        background-position: 0 -1.55rem;
+    }
+    .my-hbs .share-root{
+        padding-top: 13.8rem;
+    }
+
+    *//*状态2*//*
+    .u-hbs-end>section {
+        padding-top: 0.5rem;
+    }
+    .u-hbs-end>section>ul li:nth-child(2) {
+        padding-top: 14rem;
+    }
+    .u-hbs-end .share-root{
+        padding-top:0.5rem;
+    }
+
+    *//*状态3*//*
+    .remain-hbs>section {
+        padding-top: 0.5rem;
+    }
+    .remain-hbs .share-root {
+        padding-top: 14rem;
+    }
+
+    *//*状态4*//*
+    .active-end>section {
+        padding-top: 0.5rem;
+    }
+    .active-end .share-root {
+        padding-top: 16.3rem;
+        padding-bottom: 4.375rem;
+    }
+
+    *//*状态5*//*
+    .hbs-over>section {
+        padding-top: 0.5rem;
+    }
+    .hbs-over .share-root {
+        padding-top: 15.5rem;
+        padding-bottom: 4.375rem;
+    }
+
+    *//*状态6*//*
+    .active-no-begin>section {
+        padding-top: 0.5rem;
+    }
+    .active-no-begin .share-root {
+        padding-top: 15.3rem;
+    }
+
+    *//*获取普通红包*//*
+    [data-adapt-type='0']  .get-hb {
+        background-image: url(../img/iphone4/get-hb.jpg);
+    }
+    .get-hb .share-root {
+        transform: scale(.8);
+        padding-top: 9.32rem;
+        margin-bottom: -1.2rem;
+    }
+    .get-hb .get-hb-desc{
+        padding-top: 4.7rem;
+    }
+}*/
+

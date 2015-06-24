@@ -1,0 +1,93 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta content="telephone=no" name="format-detection" />
+	<title>苏宁易购优惠券抢抢抢</title>
+     <link rel="stylesheet" href="style/reset.css"/>
+	<link rel="stylesheet" href="style/friends.css"/>
+    <link rel="stylesheet" href="style/shareoverlay.css"/>
+    <link rel="stylesheet" href="../lib/component/common/error-net/style/error-net.css">
+    <link rel="stylesheet" href="style/hbdetail.css"/>
+</head>
+<body>
+<script type="text/javascript" async="false" src="../lib/component/inline/adapt.js?__inline"></script>
+    <section>
+        <section class="content">
+            <section class="friends">
+            </section>
+        </section>
+    </section>
+
+
+<!--描述-->
+<script id="desc" type="text/html">
+    <section class="item {{ dirPurse.isExpired == 'ture' && 'disabled'}}">
+        <div class="item-detail">
+            <div class="{{dirPurse.isExpired == 'ture' ? 'detail-icon-gray' : 'detail-icon'}}"/>
+            <dl>
+                {{ if dirPurse.isExpired == 'ture'}}
+                优惠劵已过期
+                {{else if dirPurse.noReceiveNum != "0"}}
+                <dd>已领取{{dirPurse.receiveNum}}个，还剩下<i class="a1">{{dirPurse.noReceiveNum}}</i>个</dd>
+                <dd><div>好友领取完，可获得<span>{{dirPurse.reward}}元</span>奖金优惠劵</div></dd>
+                <dd class="and-friend">
+                    <a href="#" class="hb-a-btn" id="invite-friend">继续拉好友</a>
+                    <div>{{dirPurse.receivedTime | dateFormat:"yyyy-MM-dd hh:mm"}}</div>
+                </dd>
+                {{else}}
+                <dl><dd>优惠劵已领完</dd><dd><div>已获得<span>{{dirPurse.reward}}元</span>奖金优惠劵</div></dd> </dl>
+                {{/if}}
+            </dl>
+        </div>
+    </section>
+</script>
+
+<!-- 好友列表-->
+<script id="friend" type="text/html">
+    <ul>
+        {{ each friendLuckList as val i}}
+        <li>
+            <img src="{{val.icon}}" onerror="this.src='img/nofilter/icon_111.jpg'">
+            <dl>
+                <dd>
+                    <p>{{val.nickName}}</p>
+                    <p>{{val.desc}}</p>
+                </dd>
+                <dd>
+                    <p>领到<i></i><em>{{val.receiveReward | getInt}}</em><i></i>元</p>
+                    <p>{{val.receiveDate | dateFormat:"MM月dd日 hh:mm:ss"}}</p>
+                </dd>
+            </dl>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+
+<!--CDN-COBO-->
+<script type="text/javascript" src="http://m.suning.com/RES/wap/common/script/lib/zepto/1.1.4/zepto.min.js?v=2.3.2"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"> </script>
+
+<!--MVC 接口加载区-->
+<script type="text/javascript" src="../lib/wap.util.js"></script>
+<script type="text/javascript" src="../lib/wap.service.js"></script>
+<script type="text/javascript" src="../lib/component/common/wap.cmp.js"></script>
+<script type="text/javascript" src="../lib/wap.mvc.js"></script>
+
+<!--组件加载区-->
+<script type="text/javascript" src="../lib/component/common/error-net/error-net.js"></script>
+<script type="text/javascript" src="../lib/component/wechat.js"></script>
+<script type="text/javascript" src="../lib/component/invitefriends.js"></script>
+
+<!--service加载区-->
+<!--<script src="../test/testdata.js"></script>-->
+<script type="text/javascript" src="../service/hbdetail.js"></script>
+
+<!--其他：埋点-->
+<script type="text/javascript" src="../lib/component/common/buriedpoint.js"></script>
+    </body>
+</html>
+

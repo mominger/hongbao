@@ -1,0 +1,149 @@
+/*global*/
+/*html{-webkit-text-size-adjust:none;overflow:hidden;}*/
+/*默认 16px 响应式：读取innerWidth更新fontsize，更新rem匹配 */
+/*转测时再考虑压缩图片*/
+/*html {
+    font-size: 16px;
+}*/
+
+/*--公用的底部层 [[--*/
+footer.get-hb-foot{
+    position:fixed;
+    width:20rem;
+    min-width:320px;
+    left:50%;
+    bottom:0;
+    margin-left:-10rem;
+    z-index:20;
+}
+footer.get-hb-foot .hb-btm{
+
+    display:-webkit-box;
+    -webkit-box-align:center;
+    -webkit-box-pack:center;
+    height:3.3125rem;
+    background:#0097E0 url(images/btm-top-bg.png) repeat-x top left;
+    background-size:1.625rem 0.625rem;
+
+}
+footer.get-hb-foot .hb-btm li{
+    -webkit-box-flex:1;
+    margin-top:0.375rem;
+    background:url(images/btm-spe.png) no-repeat right 50%;
+    background-size:0.125rem 2.375rem;
+    line-height: 3.3125rem;
+}
+footer.get-hb-foot .hb-btm li:last-child{
+    background:none;
+}
+footer.get-hb-foot .hb-btm li a{
+    display:block;
+
+    color:#FFF;
+}
+/*--公用的底部层 ]]--*/
+.my-hbs header,
+.remain-hbs header,
+.u-hbs-end header,
+.active-end header,
+.hbs-over header,
+.active-no-begin header{
+    display:-webkit-box;
+}
+.my-hbs footer,
+.remain-hbs footer,
+.u-hbs-end footer,
+.active-end footer,
+.hbs-over footer,
+.active-no-begin footer{
+    display:block;
+}
+.group-by-bg{
+    display:none;
+    width:100%;
+    margin:0 auto;
+    background:#f42070 url(images/lady-bg.jpg) no-repeat left top;
+    background-size:20rem 28.1875rem;
+}
+.hb-content{display: none;}
+.my-hbs .hb-content,
+.remain-hbs .hb-content,
+.u-hbs-end .hb-content,
+.active-end .hb-content,
+.hbs-over .hb-content,
+.active-no-begin .hb-content{
+  display: block;
+}
+.hb-content .big-font{
+    height:1.875rem;
+    line-height:1.875rem;
+    margin-top:0.75rem;
+    font-size:1.5125rem;
+    color:#fff;
+    font-weight:bold;
+    font-family: "Microsoft Yahei";
+    text-align:center;
+}
+.hb-content .small-font{
+   margin-top:0.3125rem;
+   font-size:0.85rem;
+   color:#FFF100;
+   font-weight:bold;
+}
+.hb-content .small-font i{
+    color:#FFF;
+}
+.hb-content .group-hb-bg{
+    width:17.8125rem;
+    height:13.75rem;
+    margin:0.3125rem auto 0 auto;
+    background-repeat:no-repeat;
+    background-size:17.8125rem  13.75rem;
+}
+.my-hbs .hb-content .group-hb-bg{
+    background-image:url(images/hb-group-bg.png); 
+}
+.u-hbs-end .hb-content .group-hb-bg{
+    background-image:url(images/hb-share-bg.png);
+}
+.active-end .hb-content .group-hb-bg{
+    background-image:url(images/activity-end.png);
+}
+.remain-hbs .hb-content .group-hb-bg{
+    background-image:url(images/hb-invitited-bg.png);
+}
+.hbs-over .hb-content .group-hb-bg{
+    background-image:url(images/late-bg.png);
+}
+.active-no-begin .hb-content .group-hb-bg{
+    background-image:url(images/hb-not-start.png);
+}
+.hb-content .share-root{
+    margin-top:0.75rem;
+}
+.share-root .share-tell-txt{
+    margin-bottom:0.4375rem;
+    color:#FFF;
+    font-size:0.875rem;
+}
+.share-root .share-btn{
+   padding-bottom:1.25rem;
+   font-size:1.25rem;
+}
+.share-root .share-btn a{
+    display:block;
+    width:16.25rem;
+    height:3.125rem;
+    font-size:1.25rem;
+    margin:0 auto;
+    background: -webkit-gradient(linear, 0% 50%, 0% 51%, from(#fee700), to(#f9c300));
+    border-radius:0.5625rem;
+    line-height:3.125rem;
+    color:#E4007F;
+}
+.rmain-pare{
+    height:1.75rem;
+    line-height: 1.75rem;
+    font-size:0.625rem;
+    font-weight:bold;
+}

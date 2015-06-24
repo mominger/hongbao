@@ -1,0 +1,386 @@
+/*global*/
+/*html{-webkit-text-size-adjust:none;overflow:hidden;}*/
+/*默认 16px 响应式：读取innerWidth更新fontsize，更新rem匹配 */
+/*转测时再考虑压缩图片*/
+/*html {
+    font-size: 16px;
+}*/
+body {
+    font-family: "黑体","Microsoft Yahei";
+    text-align: center;
+}
+body>section {
+/*    position: relative;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 640px;*/
+   /* background: #000103;*/
+   /* color: #ffffff;*/
+}
+
+
+/*common*/
+
+/*header*/
+/*header: 状态1才展示*/
+header div{
+    display: none;
+    position: absolute;
+}
+/*header: 关注苏宁易购  需求变更取消*/
+header .focus-sn {
+    height: 1rem;
+    padding-top: 0.938rem;
+    padding-left: 0.875rem;
+}
+header .focus-sn a {
+    display: block;
+    position: absolute;
+    height: 1rem;
+    width: 4.219rem;
+    font-size: 0.547rem;
+    line-height: 1rem;
+    border-radius: 0.438rem;
+    text-align: center;
+    background: #bf0201;
+    color: #f1fcef;
+}
+/*header: 活动规则*/
+header .active-rlue {
+    top: 0;
+    right: 0;
+    width: 2.688rem;
+    height: 2.469rem;
+    background: url(../img/sprit/active-rule.png) no-repeat top right;
+    background-size: 2.688rem 2.469rem;
+}
+.my-hbs>header>div{
+    display: block;
+}
+
+/*content*/
+/*content:common*/
+.get-hbs span {
+   display: block;
+}
+.get-hbs, .get-hbs.active-end{
+    display: none;
+    width: 20rem;
+    max-width:640px;
+    position:relative;
+    background-repeat:no-repeat;
+    background-position: top center;
+    background-size: 20rem 28.969rem;
+    min-height: 28.969rem;
+}
+.get-hbs .small-font{
+
+    color: #0e0804;
+}
+.get-hbs .big-font{
+    color:#FFF;
+    font-weight:bold;
+    font-family: "Microsoft Yahei";
+    text-align:center;
+}
+
+/*content：状态1*/
+.my-hbs {
+    /*width: 20rem;*/
+    /*min-height: 28.969rem;*/
+    /*background: url(../img/get-hbs.png) no-repeat top center #ad0d16;*/
+    background-image: url(../img/get-hbs.jpg);
+   /* background-size: 20rem 28.969rem;*/
+}
+/*[data-adapt-type='0'] .my-hbs {
+    background-image: url(../img/320/get-hbs.png);
+}
+[data-adapt-type='1'] .my-hbs {
+    background-image: url(../img/480/get-hbs.png);
+}*/
+
+
+.active-end {
+    background-image:url(images/lady-bg.jpg);
+}
+
+.active-end>section {
+    padding-top: 2.9rem;
+}
+.active-end .big-font {
+    margin-top:0.75rem;
+    font-size:1.5125rem;
+    height:1.875rem;
+    line-height:1.875rem;
+}
+.active-end .small-font {
+    margin-top:0.3125rem;
+    font-size:0.85rem;
+    color: #FFF100;
+}
+
+.active-end .share-root{
+    padding-top: 17rem;
+    padding-bottom:4.375rem;
+}
+
+.active-end .share-btn a{
+    font-size: 1.563rem;
+}
+
+
+
+/*content:  share button*/
+.share-btn {
+    display:block;
+    width:16.25rem;
+    height:3.1875rem;
+    margin:0 auto;
+    background: -webkit-gradient(linear, 0% 50%, 0% 51%, from(#fee700), to(#f9c300));
+    border-radius:0.5625rem;
+    line-height:3.1875rem;
+    background-size:16.25rem 3.1875rem;
+
+}
+.share-btn a {
+    display:block;
+    color:#E4007F;
+}
+
+/*footer*/
+/*footer {*/
+    /*position: fixed;*/
+    /*bottom: 0px;*/
+    /*width: 100%;*/
+    /*min-width: 320px;*/
+    /*max-width: 640px;*/
+    /*height: 2.5rem;*/
+    /*background: #bf0101;*/
+    /*z-index:4;*/
+    /*background-size: 320px 2px;*/
+/*}*/
+/*footer>ul {*/
+    /*display: -webkit-box;*/
+    /*-webkit-box-orient: horizontal;*/
+/*}*/
+/*footer>ul li {*/
+    /*display: -webkit-box;*/
+    /*-webkit-box-pack: center;*/
+    /*-webkit-box-align: center;*/
+    /*-webkit-box-flex: 1;*/
+/*}*/
+/*footer>ul li:nth-child(1),*/
+/*footer>ul li:nth-child(2) {*/
+    /*background: url(../img/sprit/line-spe.png) no-repeat right 0.063rem;*/
+    /*background-size: 0.125rem 2.313rem;*/
+/*}*/
+/*footer>ul li a {*/
+    /*display: block;*/
+    /*height: 2.5rem;*/
+    /*font-size:1.016rem;*/
+    /*line-height: 2.5rem;*/
+    /*color: #ffd9d9;*/
+    /*text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.65);*/
+/*}*/
+/*footer>ul li a:hover,*/
+/*footer>ul li a:active,*/
+/*footer>ul li a:visited{*/
+    /*color:#ffff00;*/
+/*}*/
+
+
+/*header: gethb*/
+.get-hb>header>div{
+    display: block;
+}
+/*.get-hb>header>.time-world,
+.get-hbs>header>.time-world{
+    width: 2.625rem;
+    height: 3.5rem;
+    margin-left:1.25rem;
+    background: url(../img/sprit/time-world.png) no-repeat top center;
+    background-size: 2.625rem 3.5rem;
+}*/
+
+/*content: gethb*/
+.get-hb {
+    display: none;
+    width: 20rem;
+    min-height: 24.656rem;
+    background: url(images/lady-sub-bg.jpg) no-repeat top center #ffc100;
+    background-size: 20rem 31.75rem;
+}
+
+/*[data-adapt-type='0'] .get-hb {
+    background-image: url(../img/320/get-hb.jpg);
+}
+[data-adapt-type='1'] .get-hb {
+    background-image: url(../img/480/get-hb.jpg);
+}*/
+.get-hb .empty {
+    height: 2.5rem;
+    background: #f7b500;
+}
+/*gethb  领取红包文字*/
+.friend-list .sub-hb-icon{
+    width:15.5rem;
+    height:8.75rem;
+    margin:0 auto;
+    background: url(images/sub-lady-hb.png) no-repeat;
+    background-size:15.5rem 8.75rem;
+}
+.friend-list .sub-hb-bg{
+    width:18.875rem;
+    height:12.375rem;
+    margin:1.4375rem auto 0 auto;
+    background:url(images/hb-sub-ico.png) no-repeat;
+    background-size:18.875rem 12.375rem;
+}
+.get-hb-desc{
+    margin:0 auto;
+    word-break: break-all;
+    word-wrap:break-word;
+    padding-left: 1.8rem;
+    padding-top:1.0625rem;
+    font-size: 0.586rem;
+    line-height: 0.9rem;
+    text-align: center;
+    color:#840101;
+}
+.get-hb-desc span,
+.get-hb-desc em {
+    color: #ff0000;
+}
+/*PS上的字体没有，用黑体代替*/
+.get-hb-desc span{
+    font-size: 3.9rem;
+    font-weight: bold;
+    line-height: 3.9rem;
+}
+.get-hb-desc em:nth-child(1){
+    font-size: 1.4rem;
+}
+.get-hb-desc em:nth-child(3){
+    font-size: 1.3rem;
+}
+.get-hb-desc strong{
+    color: #000000;
+}
+/*.get-hb-desc p:nth-child(4){
+    padding-left: 0.5rem;
+}*/
+/*.get-hb-desc p:nth-child(5){
+    padding-left: 0.9rem;
+}*/
+/*gethb 分享按钮微调*/
+.get-hb .share-root{
+    font-family: "Microsoft Yahei";
+    font-size:1.3125rem;
+
+    color:#FFF;
+
+}
+.get-hb .share-btn{
+    width:11.25rem;
+    height:2.1875rem;
+    margin:0 auto;
+    background: -webkit-gradient(linear, 0% 50%, 0% 51%, from(#fee700), to(#f9c300));
+    line-height:2.1875rem;
+
+}
+.get-hb .share-btn a{
+    height:2.1875rem;
+    line-height:2.1875rem;
+    color:#e4007f;
+    font-size: 1.3125rem;
+}
+
+
+/*other*/
+/*分辨率高度值过大时空背景修复*/
+.empty-bg{
+    position: absolute;
+    background:url(../img/sprit/hb-bg-ten.jpg) repeat;
+    /*background: #bf0101;;*/
+    z-index:-1;
+}
+
+@media screen and (max-width:320px) and (max-height:480px) {
+    /*获取群红包*/
+    .get-hbs .share-root{
+        padding-bottom: 0;
+    }
+
+    /*状态1*/
+    [data-adapt-type='0']  .my-hbs,
+    [data-adapt-type='0']  .u-hbs-end,
+    [data-adapt-type='0']  .remain-hbs,
+    [data-adapt-type='0']  .active-end,
+    [data-adapt-type='0']  .hbs-over,
+    [data-adapt-type='0']  .active-no-begin{
+        background-position: 0 -1.55rem;
+    }
+    .my-hbs .share-root{
+        padding-top: 13.8rem;
+    }
+
+    /*状态2*/
+    .u-hbs-end>section {
+        padding-top: 0.5rem;
+    }
+    .u-hbs-end>section>ul li:nth-child(2) {
+        padding-top: 14rem;
+    }
+    .u-hbs-end .share-root{
+        padding-top:0.5rem;
+    }
+
+    /*状态3*/
+    .remain-hbs>section {
+        padding-top: 0.5rem;
+    }
+    .remain-hbs .share-root {
+        padding-top: 14rem;
+    }
+
+    /*状态4*/
+    .active-end>section {
+        padding-top: 0.5rem;
+    }
+
+
+    /*状态5*/
+    .hbs-over>section {
+        padding-top: 0.5rem;
+    }
+    .hbs-over .share-root {
+        padding-top: 15.5rem;
+        padding-bottom: 4.375rem;
+    }
+
+    /*状态6*/
+    .active-no-begin>section {
+        padding-top: 0.5rem;
+    }
+    .active-no-begin .share-root {
+        padding-top:0rem;
+    }
+
+    /*获取普通红包*/
+    /*[data-adapt-type='0']  .get-hb {*/
+        /*background-image: url(../img/iphone4/get-hb.jpg);*/
+    /*}*/
+
+
+}
+.active-end  .share-root a.share-btn span{
+    font-size:1.25rem;
+    color:#E4007F;
+}
+.active-end .share-root {
+    padding-top: 15.75rem;
+    padding-bottom: 4.375rem;
+    background:url(images/activity-end.png) no-repeat center 0.5rem;
+    background-size:17.8125rem  13.75rem;
+}
+

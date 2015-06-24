@@ -1,0 +1,194 @@
+/*global*/
+/*html {
+    font-size: 16px;
+}*/
+body {
+    font-family: "黑体","Microsoft Yahei";
+    text-align: center;
+    background: #f3e3cc;
+}
+body>section {
+    min-width: 320px;
+    max-width: 640px;
+/*    padding: 0 0.625rem;*/
+    background: #f3e3cc;
+}
+/*body>section {
+    position: relative;
+    margin: 0 auto;
+    min-width: 320px;   *//*减去padding*//*
+    max-width: 640px;
+}*/
+
+/*content*/
+body>section .content{
+    display: none;
+    padding: 0.625rem;
+}
+/*content: 详情  移植我发的列表样式*/
+.item{
+    position:relative;
+    /*background:#FFF;*/
+    margin-top: 0.625rem;
+    /*background-image: url(../img/sprit/half-circle-red.png),url(../img/sprit/half-circle-none.png);
+    background-repeat: no-repeat;
+    background-position: top left, top right;
+    background-size: 0.125rem 3.5rem;*/
+
+    background: url(../img/sprit/half-circle-none.png) no-repeat top right #FFF;
+    background-size: 0.125rem 3.5rem;
+  /*  background-repeat: no-repeat;
+    background-position: top left, top right;
+    background-size: 0.125rem 3.5rem;*/
+
+}
+.item .item-detail{
+    display: -webkit-box;
+    height: 3.438rem;
+    -webkit-box-align: center;       /*垂直居中*/
+}
+.item dd{display: -webkit-box;}
+.item-detail dl:nth-child(2){
+    padding-right: 0.45rem;
+    font-size:0.528rem;
+}
+/*.item-detail dl:nth-child(2) dd:nth-child(3){
+    display: -webkit-flex;
+    text-align: right;
+}*/
+/*.item-detail dl:nth-child(2) dd:nth-child(3) div{
+    display: -webkit-flex;
+    text-align: right;
+    -webkit-flex:1;
+    padding-top: 0.8rem;
+}*/
+.item-detail dl:nth-child(2) dd:nth-child(1){
+    line-height: 1.2rem;
+    color: #333333;
+}
+.item-detail dl:nth-child(2) dd:nth-child(1) i{
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.item-detail dl span{
+    color: #e54b2c;
+}
+.item-detail dl:nth-child(2) dd:nth-child(2){
+    color: #999999;
+}
+
+/*我发的列表　灰化*/
+/*.item.disabled{
+    background-image: url(../img/sprit/half-circle-gray.png),url(../img/sprit/half-circle-none.png);
+}*/
+.item.disabled .item-detail dl:nth-child(2){
+    text-align: left;
+    color:#666666;
+}
+
+/*微调：继续拉好友*/
+.item{
+    margin-top: 0;
+    background-repeat: repeat-y;
+}
+
+.detail-icon:after{             /*直立三角形*/
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 100%;
+     left: 50%;
+    border-bottom: 0.44rem solid #ffffff;
+    border-left: 0.44rem solid transparent;
+    border-right: 0.44rem solid transparent;
+    -webkit-transform: translate(-50%,-100%);
+    z-index: 5;
+}
+.item .and-friend div{
+    width: 7.2rem;
+    padding-top: 1rem;
+    text-align: right;
+    font-size:0.469rem;
+    color:#cccccc;
+
+}
+/*.item .and-friend{
+    display: -webkit-flex;
+
+}
+.item .and-friend div{
+    display: -webkit-flex;
+    -webkit-flex:1;
+}*/
+#invite-friend{
+    display: block;
+    width: 5rem;
+    height: 1.187rem;
+    margin-top:0.35rem;
+    background: #46c9d8;
+    font-size: 0.781rem;
+    line-height: 1.25rem;
+    color: #fefefe;
+}
+.item .item-detail{
+    height: 5rem;
+}
+
+
+/*content: 微调好友列表*/
+.friends{
+    display: none;
+    background-image: url(../img/sprit/half-circle-gray-ldetail.png),url(../img/sprit/half-circle-gray-rdetail.png);
+    background-repeat: repeat-y;
+    background-position: top left, top right;
+    background-size: 0.125rem 3.5rem;
+}
+
+
+/*其他*/
+/*详情图片  TODO:和我的红包样式重复*/
+.detail-icon-gray,
+.detail-icon{
+    width: 5.313rem;
+    height:100%;
+    /*margin-left:0.125rem;*/
+    margin-right:0.625rem;
+    font-size:0.469rem;
+    color:#ffffff;
+   /* background-size: 4.094rem 2.594rem;*/
+}
+.detail-icon-gray{
+    background: url(../img/sprit/half-circle-gray.jpg),url(../img/sprit/detail-icon-gray.png) no-repeat;
+    background-repeat: repeat-y,no-repeat;
+    background-position: top left, center center;
+    background-size: 0.125rem 3.5rem, 4.094rem 2.594rem;
+    background-color: #cccccc;
+    /*padding-top:0;
+    background: url(../img/sprit/detail-icon-gray.png) no-repeat center #cccccc ;*/
+}
+.detail-icon{
+    background: url(../img/sprit/half-circle-red.jpg),url(../img/sprit/detail-icon.png) no-repeat;
+    background-repeat: repeat-y,no-repeat;
+    background-position: top left, center center;
+    background-size: 0.125rem 3.5rem, 4.094rem 2.594rem;
+    background-color: #ff6565;
+}
+.detail-icon span{
+    display: block;
+    padding-top:2.813rem;
+}
+/*.detail-icon-gray{
+    padding-top:0;
+    background: url(../img/sprit/detail-icon-gray.png) no-repeat center #cccccc ;
+}
+.detail-icon{
+    background: url(../img/sprit/detail-icon.png) no-repeat center #ff6565;
+}*/
+/*.detail-icon,
+.detail-icon-gray{
+    background-size: 4.094rem 2.594rem;
+}*/
+
+
+

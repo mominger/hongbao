@@ -1,0 +1,130 @@
+/*global*/
+/*html {
+    font-size: 16px;
+}*/
+body {
+    font-family: "黑体","Microsoft Yahei";
+    color: #ffffff;
+    text-align: center;
+    background: #e9e9e9;
+}
+/*body>section {
+    position: relative;
+    margin: 0 auto;
+    min-width: 320px;   *//*减去padding*//*
+    max-width: 640px;
+}*/
+
+/*content*/
+body>section .content{
+    display: none;
+    padding: 0.938rem 0.625rem 1.875rem 0.625rem;
+}
+/*content: 详情*/
+.item{
+    width: 100%;
+    position:relative;
+    border:1px solid #DFDEDE;
+    background:#FFF;
+}
+.item:last-child{
+    margin-bottom:5.312rem;
+}
+.item .title{
+    display: -webkit-box;
+    height:1.25rem;
+    padding:0 0.781rem;
+    border-bottom:1px solid #F0F0F0;
+    background:#f86c41;
+    font-size: 0.664rem;
+    color: #fff;
+    line-height:1.25rem;
+}
+
+.item .title>div{
+    display: -webkit-box;
+    -webkit-box-flex: 1;
+}
+.item .item-detail{
+    display: -webkit-box;
+    height: 5rem;
+    -webkit-box-align: center;       /*垂直居中*/
+}
+.item dd{display:-webkit-box;}
+/*列表详情*/
+.item-detail img{
+    width: 4.781rem;
+    height: 3.625rem;
+    margin: 0 0.525rem 0;
+}
+.item-detail dl:nth-child(2){
+    width: 10rem;
+    padding-right: 0.45rem;
+}
+.item-detail dl:nth-child(2) dd:nth-child(1){
+    font-size: 0.82rem;
+    color: #333333;
+}
+.item-detail dl:nth-child(2) dd:nth-child(1) i{
+    color: #e54b2c;
+}
+.item-detail dl:nth-child(2) dd:nth-child(2){
+    font-size: 0.664rem;
+    line-height: 1.1rem;
+    color: #999999;
+}
+/*微调：继续拉好友*/
+/*.item-detail dl:nth-child(2) dd:nth-child(3){
+    padding-top: 0.313rem;
+}*/
+.item{
+    margin-bottom: 0.719rem;
+}
+#invite-friend{
+    display: block;
+    width: 4.688rem;
+    height: 1.25rem;
+    background: #46c9d8;
+    font-size: 0.781rem;
+    line-height: 1.25rem;
+    color: #fefefe;
+}
+/*disabled 情形*/
+.item.disabled .item-detail dl:nth-child(2){
+    font-size: 0.656rem;
+    text-align: left;
+    color: #999999;
+}
+.item.disabled .title{
+    background: #999;
+}
+
+/*content: 微调好友列表*/
+/*TODO: 此处圆形图片从中心点发散，与PSD不一致*/
+.friends{
+    display: none;
+    text-align: left;
+    background:url(../img/sprit/border.png) repeat-x top center #fff;
+    background-size:1rem 0.281rem;
+}
+.friends dd:nth-child(1) {
+    width: 9rem;
+}
+
+
+/*其他*/
+/*详情图片  TODO:和我的红包样式重复*/
+.detail-logo-gray,
+.detail-logo{
+    width: 4.781rem;
+    height: 3.625rem;
+    margin: 0 0.525rem 0;
+}
+.detail-logo-gray{
+    background: url(../img/nofilter/detail_logo_gray_111.png);
+}
+.detail-logo{
+    background: url(../img/nofilter/detail_logo_111.png);
+}
+
+

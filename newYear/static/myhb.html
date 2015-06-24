@@ -1,0 +1,136 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta content="telephone=no" name="format-detection" />
+	<title>苏宁易购优惠券抢抢抢</title>
+    <link rel="stylesheet" href="style/reset.css"/>
+    <link rel="stylesheet" href="../lib/component/common/error-net/style/error-net.css">
+    <link rel="stylesheet" href="style/myhb.css"/>
+</head>
+<body>
+<script type="text/javascript" async="false" src="../lib/component/inline/adapt.js?__inline"></script>
+    <section class="content">
+        <ul class="tab">
+            <li class="cur"><a href="#" id="data-tab-myfrom">我赚的优惠劵</a></li>
+            <li><a href="#" id="data-tab-myto">我发的优惠劵</a></li>
+        </ul>
+
+        <!-- 我赚的  -->
+        <div class="my-from">
+            <ul class="hb-view">
+
+            </ul>
+
+            <footer>
+                <div class="summary"><p>苏宁易购优惠券仅限在苏宁易购手机客户端、wap页(m.suning.com)、ipad客户端、TV端；2.14-2.25号使用。</p></div>
+                <div class="use"  data-event="to-bind" >使用</div>
+            </footer>
+        </div>
+
+		<!-- 我发的 -->
+        <section class="my-to">
+        </section>
+   </section>
+
+<!--我挣的-->
+<script id="from" type="text/html">
+    <ul>
+        {{ each normalPurseList as val i}}
+        <li class="{{if val.isExpired === 'true'}}disabled{{/if}}">
+            <dl>
+                <dd class="price">¥<span>{{val.purseValue | getInt}}</span><em>元</em></dd>
+            </dl>
+            <dl>
+                <dd>{{if val.isExpired === 'true'}}已失效
+                    {{else}}
+                    {{ if val.exchangeStatus == "1002" }}已兑换{{ else }}
+                    兑换有效期：{{val.expireTime | dateFormat:"MM月dd日 hh"}}点前有效{{/if}}
+                    {{/if}}
+                </dd>
+                <dd>来自-<span>
+                    {{if val.shareAccountId === val.accountId}}
+                        我的
+                        {{if val.rewardType == "2"}}
+                            普通优惠劵{{else}}
+                            奖励优惠劵{{/if}}
+                        {{else}}
+                        {{val.purseSource}}优惠劵
+                    {{/if}}
+                </span> {{val.isExpired != "true"&& val.ticketRule}}</dd>
+            </dl>
+        </li>
+        {{ /each }}
+    </ul>
+</script>
+
+<!-- 我赚的提示-->
+<script id="fromTip" type="text/html">
+    <div class="tip"><i></i>
+        {{if isBindEgo == "true"}}
+            <p data-event='to-app'>
+        {{else}}
+            <p data-event='to-bind'>
+        {{/if}}
+        {{if isBindEgo == "true"}}
+        已绑定账号，打开/下载<strong data-event="to-app">苏宁易购客户端</strong>去购物。</p>
+    {{else}}
+        绑定苏宁易购账号，快速使用优惠券。
+    {{/if}}
+    </div>
+</script>
+
+<!--我发的-->
+<script id="to" type="text/html">
+    <ul>
+        {{ each dirPurseList as val i}}
+        <li class="item {{ val.isExpired == 'ture' && 'disabled'}}">
+            <a href="javascript:void(0);">
+                <div class="item-detail" data-detail-id="{{val.dirPurseId}}" data-open-id="{{urlParam.openId}}">
+                    <div class="{{val.isExpired == 'ture' ? 'detail-icon-gray' : 'detail-icon'}}">
+                            {{ if val.isExpired != 'ture'}}<span>{{val.receivedTime | dateFormat:"yyyy-MM-dd hh:mm"}}</span>{{/if}}
+                        </div>
+                    <dl>
+                        {{ if val.isExpired == 'ture'}}
+                        已过期
+                        {{else if val.noReceiveNum != "0"}}
+                        <dd>已经领取{{val.receiveNum}}个，还剩下<i class="a1">{{val.noReceiveNum}}</i>个</dd>
+                        <dd><div>好友领取完，可获得<span>{{val.reward | getInt}}元</span>奖金优惠劵</div></dd>
+                        {{else}}
+                        <dl><dd>已领完</dd><dd><div>已获得<span>{{val.reward | getInt}}元</span>奖金优惠劵</div></dd> </dl>
+                        {{/if}}
+                    </dl>
+                    <dl class="detail-circle">详情</dl>
+                </div>
+            </a>
+        </li>
+        {{ /each }}
+    </ul>
+</script>
+
+<!--CDN-COBO-->
+<script type="text/javascript" src="http://m.suning.com/RES/wap/common/script/lib/zepto/1.1.4/zepto.min.js?v=2.3.2"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"> </script>
+
+<!--MVC 接口加载区-->
+<script type="text/javascript" src="../lib/wap.util.js"></script>
+<script type="text/javascript" src="../lib/wap.service.js"></script>
+<script type="text/javascript" src="../lib/component/common/wap.cmp.js"></script>
+<script type="text/javascript" src="../lib/wap.mvc.js"></script>
+
+<!--组件加载区-->
+<script type="text/javascript" src="../lib/component/common/error-net/error-net.js"></script>
+<script type="text/javascript" src="../lib/component/wechat.js"></script>
+<script type="text/javascript" src="../lib/component/nodata.js"></script>
+
+<!--service加载区-->
+<script src="../../../../act/20150123_siJiYe/project/test/testdata.js"></script>
+<script type="text/javascript" src="../service/myhb.js"></script>
+
+<!--其他：埋点-->
+<script type="text/javascript" src="../lib/component/common/buriedpoint.js"></script>
+</body>
+</html>

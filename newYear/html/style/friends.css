@@ -1,0 +1,118 @@
+/*global*/
+
+/*好友列表指引性文字*/
+.friend-view {
+    display: none;
+}
+
+.friend-view>div {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0.313rem;
+    background: url(../img/sprit/arrow.png) no-repeat bottom center;
+    background-size: 0.688rem 0.313rem;
+}
+
+.friend-view>div p {
+    font-size: 0.547rem;
+    line-height: 1.5rem;
+    color: #fff;
+}
+
+/*好友列表*/
+.friends {
+/*    padding: 0.375rem 0.625rem 0.781rem 0.625rem;*/
+    background: #f5f5f5;
+    text-align: left;
+}
+
+.friends>div {
+    border-radius: 0.625rem;
+    background: #FFF7DD;
+    text-align: left;
+}
+
+.friends img {
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 0.938rem;
+}
+
+.friends em {
+    color: #ff0000;
+    font-weight: bold;
+    font-size:0.664rem;
+}
+
+/*空格间距*/
+.friends i {
+    display: inline-block;
+    width: 0.1rem;
+}
+
+.friends ul {
+    padding: 0 0.625rem 0.625rem;
+}
+
+.friends li {
+    display: -webkit-box;
+    padding: 0.625rem 0 0.35rem 0;
+    /*padding: 10px 0;*/
+    border-bottom: 1px dashed #BBB;
+}
+
+.friends li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: -0.2rem;
+}
+
+.friends dl,
+.friends dd {
+    position: relative;
+}
+
+.friends dl {
+    display: -webkit-box;
+    padding: 0 0.469rem;
+    /*  top: -0.15rem;*/
+}
+
+.friends dd:nth-child(1) {
+    width: 10rem;
+}
+
+.friends dd:nth-child(1) p:nth-child(1) {
+    font-size: 0.703rem;
+    line-height: 1rem;
+    color: #000;
+}
+
+.friends dd:nth-child(1) p:nth-child(2) {
+    font-size: 0.528rem;
+    color: #999;
+}
+
+.friends dd:nth-child(1) p span {
+    font-size: 0.6rem;
+    color: #999;
+}
+
+.friends dd:nth-child(2) {
+    padding-top: 0.1rem;
+    font-size: 0.528rem;
+    line-height: 0.8rem;
+    text-align: right;
+    color: #666666;
+}
+.friends dd:nth-child(2) span{
+    font-size:0.469rem;
+    color:#999999;
+}
+
+/*.friends dd:nth-child(2)>div {
+    padding-top: 0.5rem;
+}*/
+
+/*
+.hb-bottom { position: relative; height: 20px; }*/

@@ -1,0 +1,1 @@
+!function(n,t){function i(){n(".pipup-btn").on(t.EVENT.CLICK,function(){$H.redirect($H.getWeChat(e.redirectUrl))})}function c(){}function u(){i(),c()}function o(){}var e=t.Data.URL_PARAM;n(function(){o(),u()})}(jQuery,HB);
