@@ -10,6 +10,6 @@
   - 去seajs模块化，改为JSON全局类
 
 
-***线上版本***
+**线上版本**
 - ladyBro 红包闺蜜秀版本。 采用传统的解耦
 - newYear 红包新春版本。采用MVC解耦，相当于hb-fact-wapmvc在线上的实践。
