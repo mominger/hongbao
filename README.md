@@ -14,4 +14,4 @@
 **ladyBro**
 - 红包闺蜜秀版本。 采用传统的解耦
 **newYear**
-- 红包新春版本。采用MVC解耦，相当于hb-fact-wapmvc在线上的实践。 
+- 红包新春版本。采用MVC解耦，相当于hb-fact-wapmvc在线上的实践。  
